@@ -1536,7 +1536,7 @@ Bytes Received: {net_io.bytes_recv / (1024**2):.2f}MB
 )
 async def set_container_limit(ctx, max_limit: int):
     """Set maximum container limit (Owner only)"""
-    if ctx.author.id != 1210291131301101618:  # Only the owner can set limit
+    if ctx.author.id != 875671806609084428:  # Only the owner can set limit
         await ctx.send("❌ Only the owner can set container limit!", ephemeral=True)
         return
     
@@ -2655,3 +2655,4 @@ if __name__ == "__main__":
         logger.error(f"Bot crashed: {e}")
 
         traceback.print_exc()
+
