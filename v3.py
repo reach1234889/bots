@@ -1447,7 +1447,7 @@ async def admin_stats(ctx):
         embed = discord.Embed(title="Amdx7 System Statistics", color=discord.Color.blue())
         embed.add_field(name="VPS Instances", value=f"Total: {len(bot.db.get_all_vps())}\nRunning: {len([c for c in containers if c.status == 'running'])}", inline=True)
         embed.add_field(name="Docker Containers", value=f"Total: {len(containers)}\nRunning: {len([c for c in containers if c.status == 'running'])}", inline=True)
-        embed.add_field(name="CPU Usage", value=f"{0.3%", inline=True)
+        embed.add_field(name="CPU Usage", value=f"0.3%", inline=True)
         embed.add_field(name="Memory Usage", value=f"1GB / 64", inline=True)
         embed.add_field(name="Disk Usage", value=f"3GB / 190GB", inline=True)
         embed.add_field(name="Network", value=f"Sent: {stats['network_sent']:.2f}MB\nRecv: {stats['network_recv']:.2f}MB", inline=True)
@@ -2655,4 +2655,5 @@ if __name__ == "__main__":
         logger.error(f"Bot crashed: {e}")
 
         traceback.print_exc()
+
 
